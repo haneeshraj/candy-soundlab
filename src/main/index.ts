@@ -32,6 +32,8 @@ function createWindow(): void {
     console.log('Server listening on port 6969')
   })
 
+  autoUpdater.checkForUpdates()
+
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
     return { action: 'deny' }
@@ -69,6 +71,11 @@ app.whenReady().then(() => {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
+  })
+
+  // Get - App version
+  ipcMain.handle('getVersion', () => {
+    return app.getVersion()
   })
 })
 

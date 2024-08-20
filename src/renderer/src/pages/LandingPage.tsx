@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 
+import Versions from '@renderer/components/Versions'
+
 const LandingPage = () => {
   return (
     <>
@@ -20,7 +22,7 @@ const LandingPage = () => {
 
       <Link to="/not-found">Not Found</Link>
 
-      <h1>Another test</h1>
+      <Versions />
     </>
   )
 }
