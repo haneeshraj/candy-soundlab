@@ -19,6 +19,8 @@ const LandingPage = () => {
       <Link to="/upload-release">Upload Release</Link>
 
       <Link to="/not-found">Not Found</Link>
+
+      <h1>test</h1>
     </>
   )
 }
