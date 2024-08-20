@@ -20,7 +20,7 @@ const LandingPage = () => {
 
       <Link to="/not-found">Not Found</Link>
 
-      <h1>test</h1>
+      <h1>testing if auto updater is workign</h1>
     </>
   )
 }
